@@ -65,13 +65,26 @@
 
     <main id="main-content">
       <section class="hero" id="top" aria-labelledby="hero-title">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="imgs/8985056-hd_2048_858_24fps.mp4" type="video/mp4" />
+        </video>
+
         <div class="hero-grain" aria-hidden="true"></div>
 
         <div class="hero-copy">
           <p class="eyebrow">L'essence de la lumière</p>
           <p class="hero-intro split-lines">
             Uma fragrância desenhada como uma segunda pele. Notas luminosas,
-            matérias raras e uma presença que permanece muito depois do instante.
+            matérias raras e uma presença que permanece muito depois do
+            instante.
           </p>
           <a class="pill-button magnetic" href="#story">
             <span>saiba mais</span>
@@ -82,19 +95,16 @@
             </span>
           </a>
         </div>
-
-        <img
-          class="hero-model"
-          src="imgs/Mulher-hero.png"
-          alt="Mulher segurando flores alaranjadas diante do rosto"
-        />
-
         <h1 class="hero-title" id="hero-title" aria-label="Souveraine">
           Souveraine
         </h1>
       </section>
 
-      <section class="editorial section-pad" id="collection" aria-label="Coleção Souveraine">
+      <section
+        class="editorial section-pad"
+        id="collection"
+        aria-label="Coleção Souveraine"
+      >
         <div class="editorial-grid">
           <figure class="editorial-card editorial-card--main">
             <div class="image-reveal">
@@ -103,14 +113,18 @@
             <figcaption>Nº 01 — Éclat Souverain</figcaption>
           </figure>
 
-          <figure class="editorial-card editorial-card--small editorial-card--one">
+          <figure
+            class="editorial-card editorial-card--small editorial-card--one"
+          >
             <div class="image-reveal">
               <img src="imgs/produto2.jpg" alt="Frasco dourado ornamentado" />
             </div>
             <figcaption>Nº 02 — Or Absolu</figcaption>
           </figure>
 
-          <figure class="editorial-card editorial-card--small editorial-card--two">
+          <figure
+            class="editorial-card editorial-card--small editorial-card--two"
+          >
             <div class="image-reveal">
               <img src="imgs/produto3.jpg" alt="Frasco âmbar sobre mármore" />
             </div>
@@ -143,7 +157,11 @@
         </div>
       </section>
 
-      <section class="reveal-scene" id="story" aria-label="Campanha Souveraine à beira-mar">
+      <section
+        class="reveal-scene"
+        id="story"
+        aria-label="Campanha Souveraine à beira-mar"
+      >
         <div class="reveal-stage">
           <svg
             class="reveal-mask-layer"
@@ -170,7 +188,9 @@
                   text-anchor="middle"
                   dominant-baseline="middle"
                   fill="white"
-                >Souveraine</text>
+                >
+                  Souveraine
+                </text>
               </mask>
             </defs>
             <image
