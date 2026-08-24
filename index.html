@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#edab71" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23edab71'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='serif' font-size='42' fill='%23fff8ef'%3ES%3C/text%3E%3C/svg%3E"
+    />
+    <meta
+      name="description"
+      content="Souveraine — perfumaria de luxo criada para permanecer na memória."
+    />
+    <title>Souveraine — Parfums d'exception</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Ir para o conteúdo</a>
+
+    <header class="site-header" aria-label="Navegação principal">
+      <nav class="nav-shell" aria-label="Navegação principal">
+        <div class="nav-group">
+          <a href="#collection">Produtos</a>
+          <a href="#shop">Preços</a>
+          <a href="#story">Essência</a>
+          <a href="#maison">Sobre</a>
+          <a href="#journal">Journal</a>
+        </div>
+        <div class="nav-group nav-group--secondary">
+          <a href="#maison">Suporte</a>
+          <a href="#shop">Login</a>
+        </div>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Navegação móvel">
+        <a href="#collection">Produtos</a>
+        <a href="#shop">Preços</a>
+        <a href="#story">Essência</a>
+        <a href="#maison">Sobre</a>
+        <a href="#journal">Journal</a>
+      </nav>
+      <p>Souveraine<br />Parfums d'exception</p>
+    </div>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grain" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">L'essence de la lumière</p>
+          <p class="hero-intro split-lines">
+            Uma fragrância desenhada como uma segunda pele. Notas luminosas,
+            matérias raras e uma presença que permanece muito depois do instante.
+          </p>
+          <a class="pill-button magnetic" href="#story">
+            <span>saiba mais</span>
+            <span class="button-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M5 12h13M13 7l5 5-5 5" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <img
+          class="hero-model"
+          src="imgs/Mulher-hero.png"
+          alt="Mulher segurando flores alaranjadas diante do rosto"
+        />
+
+        <h1 class="hero-title" id="hero-title" aria-label="Souveraine">
+          Souveraine
+        </h1>
+      </section>
+
+      <section class="editorial section-pad" id="collection" aria-label="Coleção Souveraine">
+        <div class="editorial-grid">
+          <figure class="editorial-card editorial-card--main">
+            <div class="image-reveal">
+              <img src="imgs/Produto1.jpg" alt="Frasco dourado Souveraine" />
+            </div>
+            <figcaption>Nº 01 — Éclat Souverain</figcaption>
+          </figure>
+
+          <figure class="editorial-card editorial-card--small editorial-card--one">
+            <div class="image-reveal">
+              <img src="imgs/produto2.jpg" alt="Frasco dourado ornamentado" />
+            </div>
+            <figcaption>Nº 02 — Or Absolu</figcaption>
+          </figure>
+
+          <figure class="editorial-card editorial-card--small editorial-card--two">
+            <div class="image-reveal">
+              <img src="imgs/produto3.jpg" alt="Frasco âmbar sobre mármore" />
+            </div>
+            <figcaption>Nº 03 — Bois de Sable</figcaption>
+          </figure>
+
+          <div class="editorial-notes">
+            <article class="note-block">
+              <span>01 / L'ouverture</span>
+              <p class="split-lines">
+                Bergamota, flor de laranjeira e uma luz delicada anunciam a
+                fragrância com precisão.
+              </p>
+            </article>
+            <article class="note-block">
+              <span>02 / Le cœur</span>
+              <p class="split-lines">
+                Jasmim, íris e madeiras claras revelam um coração envolvente e
+                silenciosamente magnético.
+              </p>
+            </article>
+            <article class="note-block">
+              <span>03 / Le sillage</span>
+              <p class="split-lines">
+                Âmbar dourado e almíscar deixam na pele um rastro íntimo,
+                sofisticado e inesquecível.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal-scene" id="story" aria-label="Campanha Souveraine à beira-mar">
+        <div class="reveal-stage">
+          <svg
+            class="reveal-mask-layer"
+            width="100%"
+            height="100%"
+            aria-hidden="true"
+          >
+            <defs>
+              <mask id="souveraine-mask">
+                <rect width="100%" height="100%" fill="black" />
+                <rect
+                  class="mask-expander"
+                  x="-5%"
+                  y="-5%"
+                  width="110%"
+                  height="110%"
+                  rx="6%"
+                  fill="white"
+                />
+                <text
+                  class="mask-word"
+                  x="50%"
+                  y="50%"
+                  text-anchor="middle"
+                  dominant-baseline="middle"
+                  fill="white"
+                >Souveraine</text>
+              </mask>
+            </defs>
+            <image
+              href="imgs/produto-napraia.jpg"
+              width="100%"
+              height="100%"
+              preserveAspectRatio="xMidYMid slice"
+              mask="url(#souveraine-mask)"
+            />
+          </svg>
+
+          <div class="reveal-photo">
+            <img
+              src="imgs/produto-napraia.jpg"
+              alt="Perfume Souveraine sobre a areia diante do oceano"
+            />
+            <div class="campaign-shade" aria-hidden="true"></div>
+            <div class="campaign-copy">
+              <p class="eyebrow">Le parfum du soleil</p>
+              <h2>Uma lembrança de verão, guardada na pele.</h2>
+              <p>
+                A brisa mineral encontra a flor de laranjeira em uma composição
+                clara, serena e profundamente elegante.
+              </p>
+              <a class="pill-button pill-button--light magnetic" href="#shop">
+                <span>descobrir</span>
+                <span class="button-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="img">
+                    <path d="M5 12h13M13 7l5 5-5 5" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection" id="shop" aria-labelledby="collection-title">
+        <div class="collection-layout">
+          <figure class="collection-portrait image-reveal">
+            <img
+              src="imgs/Mulher-na-praia.jpg"
+              alt="Mulher com um perfume Souveraine à beira-mar"
+            />
+          </figure>
+
+          <div class="collection-content">
+            <div class="collection-heading">
+              <p class="eyebrow">La collection</p>
+              <h2 id="collection-title" class="split-heading">
+                Três interpretações.<br />Uma assinatura.
+              </h2>
+            </div>
+
+            <div class="product-grid">
+              <article class="product-card">
+                <a href="#maison" aria-label="Conhecer Souveraine Éclat">
+                  <div class="product-image">
+                    <img src="imgs/Produto1.jpg" alt="Souveraine Éclat" />
+                  </div>
+                  <div class="product-meta">
+                    <span>Souveraine — Éclat</span>
+                    <strong>€ 500</strong>
+                  </div>
+                </a>
+              </article>
+
+              <article class="product-card">
+                <a href="#maison" aria-label="Conhecer Souveraine Voile">
+                  <div class="product-image">
+                    <img src="imgs/produto4.jpg" alt="Souveraine Voile" />
+                  </div>
+                  <div class="product-meta">
+                    <span>Souveraine — Voile</span>
+                    <strong>€ 500</strong>
+                  </div>
+                </a>
+              </article>
+
+              <article class="product-card">
+                <a href="#maison" aria-label="Conhecer Souveraine Ambre">
+                  <div class="product-image">
+                    <img src="imgs/produto5.jpg" alt="Souveraine Ambre" />
+                  </div>
+                  <div class="product-meta">
+                    <span>Souveraine — Ambre</span>
+                    <strong>€ 500</strong>
+                  </div>
+                </a>
+              </article>
+            </div>
+
+            <p class="collection-description split-lines">
+              Cada criação Souveraine nasce de matérias escolhidas por sua
+              textura, luminosidade e permanência. Uma coleção composta em
+              pequenas séries, com a precisão da alta perfumaria francesa.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="maison">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#top" aria-label="Voltar ao início">Souveraine</a>
+          <p>Parfums d'exception<br />Paris — France</p>
+        </div>
+
+        <div class="footer-column">
+          <h2>La maison</h2>
+          <a href="#story">Nossa história</a>
+          <a href="#collection">Ingredientes</a>
+          <a href="#journal">Savoir-faire</a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Services</h2>
+          <a href="#shop">Entregas</a>
+          <a href="#shop">Amostras</a>
+          <a href="mailto:concierge@souveraine.com">Concierge</a>
+        </div>
+
+        <div class="footer-column" id="journal">
+          <h2>Suivez-nous</h2>
+          <a href="#top">Instagram</a>
+          <a href="#top">Pinterest</a>
+          <a href="#top">Newsletter</a>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Souveraine</span>
+          <span>Paris, France</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
