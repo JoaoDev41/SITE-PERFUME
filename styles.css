@@ -80,26 +80,64 @@ button {
 }
 
 .nav-shell {
+  --glass-x: 18%;
+  --glass-y: 0%;
+  --glass-strength: 0.62;
   display: flex;
+  position: relative;
+  isolation: isolate;
   align-items: center;
   justify-content: space-between;
   min-height: 2.75rem;
   padding: 0.25rem 0.9rem;
+  overflow: hidden;
   color: rgba(255, 248, 239, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(255, 248, 239, 0.38);
   border-radius: 999px;
   background: linear-gradient(
-    115deg,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 248, 239, 0.075)
-  );
+      112deg,
+      rgba(255, 248, 239, 0.17),
+      rgba(116, 79, 47, 0.1) 58%,
+      rgba(255, 248, 239, 0.08)
+    ),
+    rgba(237, 171, 113, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 0 rgba(116, 79, 47, 0.1),
+    0 14px 38px rgba(83, 51, 28, 0.12);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  backdrop-filter: blur(24px) saturate(150%);
+}
 
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.nav-shell::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle 18rem at var(--glass-x) var(--glass-y),
+    rgba(255, 255, 255, 0.34),
+    rgba(255, 248, 239, 0.08) 35%,
+    transparent 68%
+  );
+  content: "";
+  opacity: var(--glass-strength);
+  pointer-events: none;
+}
+
+.nav-shell::after {
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: inherit;
+  content: "";
+  pointer-events: none;
+}
+
+.nav-shell > * {
+  position: relative;
+  z-index: 1;
 }
 
 .nav-group {
@@ -113,6 +151,7 @@ button {
   padding: 0.35rem 0;
   font-size: clamp(0.85rem, 1vw, 1rem);
   letter-spacing: 0.025em;
+  text-shadow: 0 1px 10px rgba(116, 79, 47, 0.14);
 }
 
 .nav-shell a::after {

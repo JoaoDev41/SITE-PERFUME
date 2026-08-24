@@ -72,6 +72,45 @@
     });
   }
 
+  function initGlassNav() {
+    const nav = document.querySelector(".nav-shell");
+    if (!nav || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+    nav.addEventListener("pointerenter", () => {
+      gsap.to(nav, {
+        "--glass-strength": 0.95,
+        scale: 1.004,
+        duration: 0.45,
+        ease: "power2.out",
+      });
+    });
+
+    nav.addEventListener("pointermove", (event) => {
+      const bounds = nav.getBoundingClientRect();
+      const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+      const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+
+      gsap.to(nav, {
+        "--glass-x": `${x}%`,
+        "--glass-y": `${y}%`,
+        duration: 0.38,
+        ease: "power2.out",
+        overwrite: "auto",
+      });
+    });
+
+    nav.addEventListener("pointerleave", () => {
+      gsap.to(nav, {
+        "--glass-x": "18%",
+        "--glass-y": "0%",
+        "--glass-strength": 0.62,
+        scale: 1,
+        duration: 0.7,
+        ease: "power3.out",
+      });
+    });
+  }
+
   function initHero() {
     const title = document.querySelector(".hero-title");
     const splitTitle = SplitText.create(title, { type: "chars", charsClass: "char" });
@@ -303,6 +342,7 @@
     document.documentElement.classList.add("is-ready");
     initMenu();
     initSmoothAnchors();
+    initGlassNav();
 
     if (!reducedMotion) {
       initHero();
